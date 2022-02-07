@@ -75,7 +75,7 @@ if CurrentPage == "Control" then
 
 
   layout["CreatePin"] = {
-    PrettyName = "New Pins~~Add Pin",
+    PrettyName = "New Pins~Add Pin",
     Style = "Button",
     Position = {36,221},
     Size = {295,35},
@@ -87,32 +87,37 @@ if CurrentPage == "Control" then
     PrettyName = "Current Pins~Pin Names",
     Style = "ComboBox",
     Position = {36,50},
-    Size = {136,28}
+    Size = {136,28},
+    FontSize = 12
   }
   layout["Pin"] = {
     PrettyName = "Current Pins~Pin",
     Style = "Text",
     Position = {195,50},
     Color = {194,194,194},
-    Size = {136,28}
+    Size = {136,28},
+    FontSize = 12
   }
   layout["NewPinName"] = {
     PrettyName = "New Pins~New Pin Name",
     Style = "Text",
     Position = {36,183},
-    Size = {136,28}
+    Size = {136,28},
+    FontSize = 12
   }
   layout["NewPinPin"] = {
     PrettyName = "New Pins~New Pin",
     Style = "Text",
     Position = {195,183},
-    Size = {136,28}
+    Size = {136,28},
+    FontSize = 12
   }
   layout["Status"] = {
     PrettyName = "Status",
     Style = "Text",
     Position = {36,293},
     Color = {194,194,194},
-    Size = {295,30}
+    Size = {295,30},
+    FontSize = 12
   }
 end
