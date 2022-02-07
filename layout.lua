@@ -56,7 +56,6 @@ if CurrentPage == "Control" then
   })
 
 
-
   layout["CreatePin"] = {
     PrettyName = "Buttons~Add Pin",
     Style = "Button",
