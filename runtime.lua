@@ -81,8 +81,6 @@ function postPinData(data)
   }
 end
 
-newPinName.EventHandler = setNewPinData
-newPinPin.EventHandler = setNewPinData
 pinNames.EventHandler = setPin
 createPin.EventHandler = function ()
   if newPinName.String ~= "" and newPinPin.String ~= "" then
