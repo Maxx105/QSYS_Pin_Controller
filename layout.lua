@@ -6,7 +6,7 @@ if CurrentPage == "Control" then
     Fill = {210,220,255},
     StrokeWidth = 1,
     Position = {3,2},
-    Size = {369,341},
+    Size = {369,370},
     CornerRadius = 8
   })
   table.insert(graphics,{
@@ -78,6 +78,15 @@ if CurrentPage == "Control" then
     PrettyName = "New Pins~Add Pin",
     Style = "Button",
     Position = {36,221},
+    Size = {295,35},
+    Color = {255,255,255},
+    UnlinkOffColor = true,
+    OffColor = {124,124,124}
+  }
+  layout["Refresh"] = {
+    PrettyName = "Refresh",
+    Style = "Button",
+    Position = {36,330},
     Size = {295,35},
     Color = {255,255,255},
     UnlinkOffColor = true,

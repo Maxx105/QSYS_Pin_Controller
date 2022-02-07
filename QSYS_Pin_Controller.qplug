@@ -94,6 +94,15 @@ function GetControls(props)
     Icon = "Plus"
   })
   table.insert(ctrls, {
+    Name = "Refresh",
+    ControlType = "Button",
+    ButtonType = "Trigger",
+    Count = 1,
+    UserPin = true,
+    PinStyle = "Both",
+    Icon = "Refresh"
+  })
+  table.insert(ctrls, {
     Name = "PinNames",
     ControlType = "Text",
     UserPin = true,
@@ -143,7 +152,7 @@ function GetControlLayout(props)
       Fill = {210,220,255},
       StrokeWidth = 1,
       Position = {3,2},
-      Size = {369,341},
+      Size = {369,370},
       CornerRadius = 8
     })
     table.insert(graphics,{
@@ -220,6 +229,15 @@ function GetControlLayout(props)
       UnlinkOffColor = true,
       OffColor = {124,124,124}
     }
+    layout["Refresh"] = {
+      PrettyName = "Refresh",
+      Style = "Button",
+      Position = {36,330},
+      Size = {295,35},
+      Color = {255,255,255},
+      UnlinkOffColor = true,
+      OffColor = {124,124,124}
+    }
     layout["PinNames"] = {
       PrettyName = "Current Pins~Pin Names",
       Style = "ComboBox",
@@ -272,6 +290,7 @@ if Controls then
   local newPinPin = Controls["NewPinPin"]
   local createPin = Controls["CreatePin"]
   local status = Controls["Status"]
+  local refresh = Controls["Refresh"]
   local initTimer = Timer.New()
   
   local pinData = {}
@@ -346,9 +365,13 @@ if Controls then
     }
   end
   
-  newPinName.EventHandler = setNewPinData
-  newPinPin.EventHandler = setNewPinData
   pinNames.EventHandler = setPin
+  refresh.EventHandler = function()
+    getPinData()
+    clearStatus()
+    pinNames.String = ""
+    pin.String = ""
+  end
   createPin.EventHandler = function ()
     if newPinName.String ~= "" and newPinPin.String ~= "" then
       print("Pin added!")

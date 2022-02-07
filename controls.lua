@@ -8,6 +8,15 @@ table.insert(ctrls, {
   Icon = "Plus"
 })
 table.insert(ctrls, {
+  Name = "Refresh",
+  ControlType = "Button",
+  ButtonType = "Trigger",
+  Count = 1,
+  UserPin = true,
+  PinStyle = "Both",
+  Icon = "Refresh"
+})
+table.insert(ctrls, {
   Name = "PinNames",
   ControlType = "Text",
   UserPin = true,

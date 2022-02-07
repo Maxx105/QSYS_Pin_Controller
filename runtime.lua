@@ -7,6 +7,7 @@ local newPinName = Controls["NewPinName"]
 local newPinPin = Controls["NewPinPin"]
 local createPin = Controls["CreatePin"]
 local status = Controls["Status"]
+local refresh = Controls["Refresh"]
 local initTimer = Timer.New()
 
 local pinData = {}
@@ -82,6 +83,12 @@ function postPinData(data)
 end
 
 pinNames.EventHandler = setPin
+refresh.EventHandler = function()
+  getPinData()
+  clearStatus()
+  pinNames.String = ""
+  pin.String = ""
+end
 createPin.EventHandler = function ()
   if newPinName.String ~= "" and newPinPin.String ~= "" then
     print("Pin added!")
