@@ -1,6 +1,6 @@
 # Q-SYS Pin Controller
 
-This is a simple plugin that allows you to get the UCI pins saved in Core Manager as well as add to them. It can be used to dynamically choose and create pins for custom UCI pin .
+This is a simple plugin that allows you to get the UCI pins saved in Core Manager as well as add to them. It can be used to dynamically choose and create pins for custom UCI pin protection.
 
 ![deployed application](assets/screenshot.PNG)
 
