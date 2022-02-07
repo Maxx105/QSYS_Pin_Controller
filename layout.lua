@@ -3,7 +3,7 @@ if CurrentPage == "Control" then
   table.insert(graphics,{
     Type = "GroupBox",
     Text = "Pin Controller",
-    Fill = {200,200,200},
+    Fill = {210,220,255},
     StrokeWidth = 1,
     Position = {3,2},
     Size = {369,341},
@@ -54,15 +54,65 @@ if CurrentPage == "Control" then
     -- FontStyle = "Bold",
     HTextAlign = "Left"
   })
+  table.insert(graphics,{
+    Type = "Text",
+    Text = "ADD A NEW PIN:",
+    Position = {99,118},
+    Size = {162,24},
+    FontSize = 12,
+    -- FontStyle = "Bold",
+    HTextAlign = "Center"
+  })
+  table.insert(graphics,{
+    Type = "Text",
+    Text = "___________________________________________________",
+    Position = {13,94},
+    Size = {349,24},
+    FontSize = 14,
+    -- FontStyle = "Bold",
+    HTextAlign = "Center"
+  })
 
 
   layout["CreatePin"] = {
-    PrettyName = "Buttons~Add Pin",
+    PrettyName = "New Pins~~Add Pin",
     Style = "Button",
     Position = {36,221},
     Size = {295,35},
     Color = {255,255,255},
     UnlinkOffColor = true,
     OffColor = {124,124,124}
+  }
+  layout["PinNames"] = {
+    PrettyName = "Current Pins~Pin Names",
+    Style = "ComboBox",
+    Position = {36,50},
+    Size = {136,28}
+  }
+  layout["Pin"] = {
+    PrettyName = "Current Pins~Pin",
+    Style = "Text",
+    Position = {195,50},
+    Color = {194,194,194},
+    Size = {136,28}
+  }
+  layout["NewPinName"] = {
+    PrettyName = "New Pins~New Pin Name",
+    Style = "Text",
+    Position = {36,183},
+    Size = {136,28}
+  }
+  layout["NewPinPin"] = {
+    PrettyName = "New Pins~New Pin",
+    Style = "Text",
+    Position = {195,183},
+    Size = {136,28}
+  }
+  layout["Status"] = {
+    PrettyName = "Status",
+    Style = "Text",
+    Position = {36,293},
+    Color = {194,194,194},
+    Size = {295,30}
   }
 end
